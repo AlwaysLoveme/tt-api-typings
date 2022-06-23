@@ -1,0 +1,1 @@
+/// <reference path="./types/app/index.d.ts" />

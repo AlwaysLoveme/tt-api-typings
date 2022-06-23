@@ -1,0 +1,39 @@
+{
+  "name": "tt-api-typings",
+  "version": "0.0.1",
+  "description": "字节小程序TS类型声明文件",
+  "main": "./index.d.ts",
+  "types": "./index.d.ts",
+  "scripts": {
+    "eslint": "eslint --config .eslintrc.js types/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlwaysLoveme/tt-typings.git"
+  },
+  "keywords": [
+    "tt",
+    "TS",
+    "interface"
+  ],
+  "author": "zhuxian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlwaysLoveme/tt-typings/issues"
+  },
+  "homepage": "https://github.com/AlwaysLoveme/tt-typings#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint": "^8.18.0",
+    "typescript": "^4.7.4"
+  },
+  "files": [
+    "LICENSE",
+    "CHANGELOG.md",
+    "README.md",
+    "index.d.ts",
+    "typings.json",
+    "types/"
+  ]
+}
