@@ -29,12 +29,15 @@ type PropertyType =
   | BooleanConstructor
   | ArrayConstructor
   | ObjectConstructor
+  | FunctionConstructor
   | null
 
 type ValueType<T extends PropertyType> = T extends null
   ? any
   : T extends StringConstructor
   ? string
+  : T extends FunctionConstructor
+  ? Function
   : T extends NumberConstructor
   ? number
   : T extends BooleanConstructor
@@ -51,6 +54,7 @@ type ShortProperty =
   | BooleanConstructor
   | ArrayConstructor
   | ObjectConstructor
+  | FunctionConstructor
   | null
 interface FullProperty<T extends PropertyType> {
   /** 属性类型 */
@@ -75,6 +79,7 @@ type AllFullProperty =
   | FullProperty<BooleanConstructor>
   | FullProperty<ArrayConstructor>
   | FullProperty<ObjectConstructor>
+  | FullProperty<FunctionConstructor>
   | FullProperty<null>
 
 type AllProperty = AllFullProperty | ShortProperty
