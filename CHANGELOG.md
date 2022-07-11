@@ -1,4 +1,4 @@
-# 2022-06-24 v0.0.4
+# 2022-06-24 v0.0.3
 
 - fix: 修复modal.d.ts中success回调confirm、cancel类型缺失
 # 2022-06-24 v0.0.2
