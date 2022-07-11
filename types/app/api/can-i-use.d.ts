@@ -1,4 +1,4 @@
-import { SyncAPI } from './types';
+import { SyncAPI } from "./types"
 
 /**
  * ### 判断小程序的 API，回调，参数，组件等是否在当前版本可用。
@@ -21,4 +21,4 @@ import { SyncAPI } from './types';
  * tt.canIUse("button.open-type.contact");
  * ```
  */
-export const canIUse: SyncAPI<[schema: string], boolean>;
+export const canIUse: SyncAPI<[schema: string], boolean>

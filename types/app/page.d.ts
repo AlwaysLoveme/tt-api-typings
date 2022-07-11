@@ -27,7 +27,7 @@ interface ShareAppMessageOption {
   channel: string
 }
 
-interface ShareOptions {
+export interface ShareOptions {
   title?: string
   desc?: string
   path?: string

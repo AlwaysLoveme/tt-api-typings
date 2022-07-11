@@ -1,10 +1,11 @@
 {
   "name": "tt-api-typings",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "字节小程序TS类型声明文件",
   "main": "./index.d.ts",
   "types": "./index.d.ts",
   "scripts": {
+    "publish": "npm run eslint && npm publish",
     "eslint": "eslint --config .eslintrc.js types/**/*.ts"
   },
   "repository": {

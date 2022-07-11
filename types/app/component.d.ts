@@ -48,7 +48,7 @@ type ValueType<T extends PropertyType> = T extends null
   ? AnyObject
   : never
 
-type ShortProperty =
+export type ShortProperty =
   | StringConstructor
   | NumberConstructor
   | BooleanConstructor
@@ -56,7 +56,7 @@ type ShortProperty =
   | ObjectConstructor
   | FunctionConstructor
   | null
-interface FullProperty<T extends PropertyType> {
+export interface FullProperty<T extends PropertyType> {
   /** 属性类型 */
   type: T
   /** 属性初始值 */
@@ -90,7 +90,7 @@ type PropertyToData<T extends AllProperty> = T extends ShortProperty
   ? ValueType<T>
   : FullPropertyToData<Exclude<T, ShortProperty>>
 
-type PropertyOption = Record<string, AllProperty>
+export type PropertyOption = Record<string, AllProperty>
 
 type PropertyOptionToData<P extends PropertyOption> = {
   [name in keyof P]: PropertyToData<P[name]>;
