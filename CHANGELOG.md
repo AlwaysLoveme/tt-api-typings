@@ -1,3 +1,5 @@
+# 2022-06-24 v0.0.4
+- feat: 优化request.d.ts中success回调data类型
 # 2022-06-24 v0.0.3
 - fix: 修复modal.d.ts中success回调confirm、cancel类型缺失
 # 2022-06-24 v0.0.2

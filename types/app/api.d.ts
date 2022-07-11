@@ -380,6 +380,7 @@ export * from "./api/webcanvas"
 export * from "./api/follow-aweme-user"
 export * from "./api/request"
 export * from "./api/media"
+export * from "./api/system-info"
 /**
  * 直播小程序相关内容
  */

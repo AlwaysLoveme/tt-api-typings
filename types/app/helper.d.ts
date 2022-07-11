@@ -4,4 +4,4 @@ export interface ComponentDescriptor {
   setData: (data: Record<string, unknown>, cb?: CallableFunction) => void
 }
 
-export type AnyObject = Record<string, any>
+export type AnyObject = Record<string, any> & { [name: string]: any }
