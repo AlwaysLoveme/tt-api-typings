@@ -48,11 +48,11 @@ export type AsyncAPIWithHandler<
     /** 错误码 */
     errNo?: number
   }
-> = (
+> = <Response>(
   options: Prettier<
     Options & {
       /** 成功回调 */
-      success?: (res: Ok) => void
+      success?: (res: Ok & Response) => void
       /** 失败回调 */
       fail?: (res: Err) => void
       /** 回调函数 */

@@ -1,3 +1,5 @@
+# 2022-07-12 v0.0.6
+- feat: tt.request支持传入success回调参数类型
 # 2022-07-12 v0.0.5
 - feat: 优化request.d.ts中success回调data类型
 # 2022-07-11 v0.0.3
