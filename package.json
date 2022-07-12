@@ -5,7 +5,7 @@
   "main": "./index.d.ts",
   "types": "./index.d.ts",
   "scripts": {
-    "publish": "npm run eslint && npm publish",
+    "publish": "npm run eslint && npm publish --access public",
     "eslint": "eslint --config .eslintrc.js types/**/*.ts"
   },
   "repository": {
