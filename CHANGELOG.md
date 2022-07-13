@@ -1,3 +1,5 @@
+# 2022-07-13 v0.0.7
+- feat: tt.getSystemInfoSync 新增battery、fontSizeSetting、language类型定义
 # 2022-07-12 v0.0.6
 - feat: tt.request支持传入success回调参数类型
 # 2022-07-12 v0.0.5

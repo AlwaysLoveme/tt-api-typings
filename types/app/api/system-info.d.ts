@@ -1,16 +1,30 @@
-import { AsyncAPI, SyncAPI } from './types';
+import { AsyncAPI, SyncAPI } from "./types"
 
-interface SystemInfo {
+export interface SafeArea {
+  /** 安全区域左上角横坐标 */
+  left: number
+  /** 安全区域右下角横坐标 */
+  right: number
+  /** 安全区域左上角纵坐标 */
+  top: number
+  /** 安全区域右下角纵坐标 */
+  bottom: number
+  /** 安全区域的宽度，单位逻辑像素 */
+  width: number
+  /** 安全区域的高度，单位逻辑像素 */
+  height: number
+}
+export interface SystemInfo {
   /** 操作系统版本 */
-  system: string;
+  system: string
   /** 操作系统类型 */
-  platform: string;
+  platform: string
   /** 手机品牌 */
-  brand: string;
+  brand: string
   /** 手机型号 */
-  model: string;
+  model: string
   /** 宿主 App 版本号 */
-  version: string;
+  version: string
   /**
    * 宿主 APP 名称
    *
@@ -21,44 +35,37 @@ interface SystemInfo {
    * - XiGua 西瓜
    * - PPX 皮皮虾
    */
-  appName: string;
+  appName: string
   /** 客户端基础库版本 */
-  SDKVersion: string;
+  SDKVersion: string
   /** 屏幕宽度 */
-  screenWidth: number;
+  screenWidth: number
   /** 屏幕高度 */
-  screenHeight: number;
+  screenHeight: number
   /** 可使用窗口宽度 */
-  windowWidth: number;
+  windowWidth: number
   /** 可使用窗口高度 */
-  windowHeight: number;
+  windowHeight: number
   /** 设备像素比 */
-  pixelRatio: number;
+  pixelRatio: number
   /** 状态栏的高度，单位 px */
-  statusBarHeight: number;
+  statusBarHeight: number
   /** 在竖屏正方向下的安全区域 */
-  safeArea: {
-    /** 安全区域左上角横坐标 */
-    left: number;
-    /** 安全区域右下角横坐标 */
-    right: number;
-    /** 安全区域左上角纵坐标 */
-    top: number;
-    /** 安全区域右下角纵坐标 */
-    bottom: number;
-    /** 安全区域的宽度，单位逻辑像素 */
-    width: number;
-    /** 安全区域的高度，单位逻辑像素 */
-    height: number;
-  };
+  safeArea: SafeArea
+  /** 系统语言 **/
+  language: string
+  /** 字体大小 **/
+  fontSizeSetting: string
+  /** 电池电量 **/
+  battery: number
 }
 
 /**
  * ### 获取系统信息
  */
-export const getSystemInfo: AsyncAPI<{}, SystemInfo>;
+export const getSystemInfo: AsyncAPI<{}, SystemInfo>
 
 /**
  * ### 同步获取系统信息
  */
-export const getSystemInfoSync: SyncAPI<[], SystemInfo>;
+export const getSystemInfoSync: SyncAPI<[], SystemInfo>
