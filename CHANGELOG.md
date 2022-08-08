@@ -1,3 +1,5 @@
+# 2022-08-08 v0.0.8
+- feat: 新增getEnvInfoSync类型定义(<a href="https://github.com/AlwaysLoveme/tt-api-typings/issues/1#issuecomment-1202119308">https://github.com/AlwaysLoveme/tt-api-typings/issues/1#issuecomment-1202119308</a>)
 # 2022-07-13 v0.0.7
 - feat: tt.getSystemInfoSync 新增battery、fontSizeSetting、language类型定义
 # 2022-07-12 v0.0.6
