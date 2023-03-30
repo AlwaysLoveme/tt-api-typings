@@ -1,5 +1,7 @@
+# 2023-03-30 v0.0.9
+- fix: tt 声明方式与官方保持一致([https://github.com/AlwaysLoveme/tt-api-typings/issues/4](https://github.com/AlwaysLoveme/tt-api-typings/issues/4))
 # 2022-08-08 v0.0.8
-- feat: 新增getEnvInfoSync类型定义(<a href="https://github.com/AlwaysLoveme/tt-api-typings/issues/1#issuecomment-1202119308">https://github.com/AlwaysLoveme/tt-api-typings/issues/1#issuecomment-1202119308</a>)
+- feat: 新增getEnvInfoSync类型定义([https://github.com/AlwaysLoveme/tt-api-typings/issues/1#issuecomment-1202119308](https://github.com/AlwaysLoveme/tt-api-typings/issues/1#issuecomment-1202119308))
 # 2022-07-13 v0.0.7
 - feat: tt.getSystemInfoSync 新增battery、fontSizeSetting、language类型定义
 # 2022-07-12 v0.0.6
