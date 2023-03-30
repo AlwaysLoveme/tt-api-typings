@@ -1,8 +1,8 @@
-import { console, setInterval, setTimeout } from "./env"
-import { BehaviorConstructor } from "./behavior"
-import { ComponentConstructor } from "./component"
-import { PageConstructor, GetCurrentPages } from "./page"
-import { AppConstructor, GetApp } from "./app"
+import {console, setInterval, setTimeout} from "./env"
+import {BehaviorConstructor} from "./behavior"
+import {ComponentConstructor} from "./component"
+import {PageConstructor, GetCurrentPages} from "./page"
+import {AppConstructor, GetApp} from "./app"
 import * as API from "./api"
 
 declare global {
@@ -12,7 +12,7 @@ declare global {
   const getCurrentPages: GetCurrentPages
   const Component: ComponentConstructor
   const Behavior: BehaviorConstructor
-  const tt: typeof API
+  const tt: { miniProgram: typeof API }
   const console: console
   const setInterval: setInterval
   const setTimeout: setTimeout

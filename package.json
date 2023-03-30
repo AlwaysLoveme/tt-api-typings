@@ -1,6 +1,6 @@
 {
   "name": "tt-api-typings",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "字节小程序TS类型声明文件",
   "main": "./index.d.ts",
   "types": "./index.d.ts",
