@@ -1,18 +1,18 @@
-import { SyncAPI } from './types';
+import { SyncAPI } from "./types"
 /**
  * 支付
  */
 export const completePaySync: SyncAPI<
   [
     {
-      orderId?: string;
+      orderId?: string
       result: {
-        status: 'success' | 'fail';
-        orderId: string;
-        outOrderNo: string;
-        result: { code: number; orderId: string } | { errMsg: string };
-      };
+        status: "success" | "fail"
+        orderId: string
+        outOrderNo: string
+        result: { code: number, orderId: string } | { errMsg: string }
+      }
     },
   ],
   {}
->;
+>

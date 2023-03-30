@@ -1,4 +1,4 @@
-import { AsyncAPIWithHandler } from './types';
+import { AsyncAPIWithHandler } from "./types"
 
 /**
  * ### 客户端直接发起一个 HTTPS GET 请求, 下载网络文件到本地临时目录
@@ -10,32 +10,32 @@ import { AsyncAPIWithHandler } from './types';
 export const downloadFile: AsyncAPIWithHandler<
   {
     /** 文件地址 */
-    url: string;
+    url: string
     /** 请求 Header */
-    header?: Record<string, string>;
+    header?: Record<string, string>
   },
   {
     /** 文件本地路径 */
-    tempFilePath: string;
+    tempFilePath: string
     /** 返回 HTTP 状态码 */
-    statusCode: number;
+    statusCode: number
   },
   DownloadTask
->;
+>
 
 interface DownloadTask {
   /** 中断下载任务 */
-  abort: () => void;
+  abort: () => void
 
   /** 监听下载任务 */
   onProgressUpdate: (
     callback: (res: {
       /** 下载进度 */
-      progress: number;
+      progress: number
       /** 已经下载的数据长度，单位byte */
-      totalBytesWritten: number;
+      totalBytesWritten: number
       /** 预期需要下载的数据总长度，单位byte */
-      totalBytesExpectedToWrite: number;
+      totalBytesExpectedToWrite: number
     }) => void,
-  ) => void;
+  ) => void
 }

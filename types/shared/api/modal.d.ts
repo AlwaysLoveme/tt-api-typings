@@ -1,4 +1,4 @@
-import { AsyncAPI } from './types';
+import { AsyncAPI } from "./types"
 
 /**
  * ### 显示模态弹窗
@@ -7,13 +7,13 @@ import { AsyncAPI } from './types';
  */
 export const showModel: AsyncAPI<{
   /** 标题 */
-  title?: string;
+  title?: string
   /** 内容 */
-  content?: string;
+  content?: string
   /** 确定按钮的文案, 默认值 "确认", 最多 4 个字符 */
-  confirmText?: string;
+  confirmText?: string
   /** 是否显示取消按钮 */
-  showCancel?: boolean;
+  showCancel?: boolean
   /** 取消按钮的文案, 最多 4 个字符 */
-  cancelText?: string;
-}>;
+  cancelText?: string
+}>

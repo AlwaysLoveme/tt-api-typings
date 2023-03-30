@@ -6,7 +6,7 @@
   "types": "./index.d.ts",
   "scripts": {
     "publish": "npm run eslint && npm publish --access public",
-    "eslint": "eslint --config .eslintrc.js types/**/*.ts"
+    "eslint": "eslint --fix --ext .ts types"
   },
   "repository": {
     "type": "git",

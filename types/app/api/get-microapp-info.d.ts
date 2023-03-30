@@ -1,13 +1,13 @@
-import { AsyncAPI } from './types';
+import { AsyncAPI } from "./types"
 /**
  * 申请退款
  */
 export const getMicroappInfo: AsyncAPI<
   {
-    appId?: string;
+    appId?: string
   },
   {
-    name: string;
-    corporateName: string;
+    name: string
+    corporateName: string
   }
->;
+>

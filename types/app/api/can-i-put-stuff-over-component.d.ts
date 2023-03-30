@@ -1,4 +1,4 @@
-import { SyncAPI } from './types';
+import { SyncAPI } from "./types"
 
 /**
  * ### 小程序中的一些组件是由客户端实现的，如 video、live-player、ad 等。
@@ -12,6 +12,6 @@ export const canIPutStuffOverComponent: SyncAPI<
   ],
   {
     /** 返回值是一个布尔值，表示是否支持在该类型组件上放置其他组件 */
-    res: boolean;
+    res: boolean
   }
->;
+>

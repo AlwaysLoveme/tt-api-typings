@@ -1,4 +1,4 @@
-import { SyncAPI } from './types';
+import { SyncAPI } from "./types"
 
 /**
  * ### 关闭对窗口大小的监听
@@ -6,6 +6,6 @@ import { SyncAPI } from './types';
 export const offWindowResize: SyncAPI<
   [],
   {
-    offWindowResize: (callback: () => void) => void;
+    offWindowResize: (callback: () => void) => void
   }
->;
+>

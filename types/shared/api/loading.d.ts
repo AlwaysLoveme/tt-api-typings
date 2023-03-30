@@ -1,4 +1,4 @@
-import { AsyncAPI } from './types';
+import { AsyncAPI } from "./types"
 
 /**
  * ### 显示灰色背景的 loading 提示框
@@ -6,8 +6,8 @@ import { AsyncAPI } from './types';
  */
 export const showLoading: AsyncAPI<{
   /** 内容，最多显示 7 个汉字长度的文本 */
-  title: string;
-}>;
+  title: string
+}>
 
 /** 隐藏 loading 提示框 */
-export const hideLoading: AsyncAPI;
+export const hideLoading: AsyncAPI

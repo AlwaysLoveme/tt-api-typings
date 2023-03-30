@@ -1,4 +1,4 @@
-import { SyncAPI } from './types';
+import { SyncAPI } from "./types"
 
 /**
  * 监听内存不足的告警事件
@@ -16,7 +16,7 @@ export const onMemoryWarning: SyncAPI<
        * - 10 TRIM_MEMORY_RUNNING_LOW
        * - 15 TRIM_MEMORY_RUNNING_CRITICAL
        */
-      level?: number;
+      level?: number
     }) => void,
   ]
->;
+>

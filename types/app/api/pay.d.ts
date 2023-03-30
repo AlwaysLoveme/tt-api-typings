@@ -1,4 +1,4 @@
-import { AsyncAPI } from './types';
+import { AsyncAPI } from "./types"
 
 /**
  * ### 调起字节跳动小程序收银台进行支付
@@ -11,20 +11,20 @@ export const pay: AsyncAPI<
   {
     orderInfo: {
       /** 担保交易服务端订单号 */
-      order_id: string;
+      order_id: string
       /** 担保交易订单号 token */
-      order_token: string;
-    };
+      order_token: string
+    }
     /**
      * 仅限调试用，上线前去掉该参数
      *
      * _debug=1 时，微信支付期间可以看到中间报错信息，方便调试
      */
-    _debug?: 0 | 1;
+    _debug?: 0 | 1
     /**
      * 固定值: 5(拉起小程序收银台)
      */
-    service: 5;
+    service: 5
   },
   {
     /**
@@ -36,6 +36,6 @@ export const pay: AsyncAPI<
      * - `4`: 支付取消
      * - `9`: 订单状态开发者自行获取
      */
-    code: number;
+    code: number
   }
->;
+>

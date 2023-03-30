@@ -1,21 +1,21 @@
 // 接口规范：https://bytedance.feishu.cn/docs/doccnUXGoRzT4FoEGEvgLkCSNqf#4RNMEq
-import { AsyncAPI } from './types';
+import { AsyncAPI } from "./types"
 
 interface UserInfo {
   /** 用户头像 */
-  avatarUrl: string;
+  avatarUrl: string
   /** 用户名 */
-  nickName: string;
+  nickName: string
   /** 用户性别，0: 未知；1:男性；2:女性 */
-  gender: number;
+  gender: number
   /** 用户城市 */
-  city: string;
+  city: string
   /** 用户省份 */
-  province: string;
+  province: string
   /** 用户国家 */
-  country: string;
+  country: string
   /** 用户语言，目前为空 */
-  language: string;
+  language: string
 }
 
 /**
@@ -27,16 +27,16 @@ export const getUserProfile: AsyncAPI<
   {},
   {
     /** "getUserProfile:ok" */
-    errMsg: string;
+    errMsg: string
     /** userInfo 的 JSON 字符串形式 */
-    rawData: string;
+    rawData: string
     /** 用户信息 */
-    userInfo: UserInfo;
+    userInfo: UserInfo
     /** 用于校验用户信息是否被篡改，请参考文档 */
-    signature: string;
+    signature: string
     /** 已加密用户数据，不包含 openId、unionId，如需解密数据请参考文档 */
-    encryptedData: string;
+    encryptedData: string
     /** 加密算法参数 */
-    iv: string;
+    iv: string
   }
->;
+>

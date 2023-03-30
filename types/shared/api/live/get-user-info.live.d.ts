@@ -1,14 +1,14 @@
-import { AsyncAPI } from '../types';
+import { AsyncAPI } from "../types"
 
 interface LiveUserInfo {
   /** 用户的open UID */
-  openUID: string;
+  openUID: string
   /** 用户的加密后昵称 */
-  secNickname: string;
+  secNickname: string
   /** 用户的加密后头像URL */
-  secAvatarURL: string;
+  secAvatarURL: string
   /** 用户身份，anchor - 主播，audience - 观众 */
-  role: string;
+  role: string
 }
 
 /**
@@ -18,8 +18,8 @@ export const getLiveUserInfo: AsyncAPI<
   {},
   {
     /** "getLiveUserInfo:ok" */
-    errMsg: string;
+    errMsg: string
     /** 房间信息 */
-    userInfo: LiveUserInfo;
+    userInfo: LiveUserInfo
   }
->;
+>

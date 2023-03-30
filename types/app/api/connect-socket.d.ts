@@ -1,35 +1,35 @@
-import { AsyncAPI, AsyncAPIWithHandler } from './types';
+import { AsyncAPI, AsyncAPIWithHandler } from "./types"
 
 interface SocketTask {
   /**
    * 表示 Socket 连接状态 code
    * 若由于参数错误导致未创建连接, 则为 undefined
    */
-  readonly readyState?: 0 | 1 | 2 | 3;
+  readonly readyState?: 0 | 1 | 2 | 3
   /** 表示 Socket 正在连接的常量 */
-  readonly CONNECTING: 0;
+  readonly CONNECTING: 0
   /** 表示 Socket 连接已经打开的常量 */
-  readonly OPEN: 1;
+  readonly OPEN: 1
   /** 表示 Socket 连接关闭中的常量 */
-  readonly CLOSING: 2;
+  readonly CLOSING: 2
   /** 表示 Socket 连接已关闭的常量 */
-  readonly CLOSED: 3;
+  readonly CLOSED: 3
 
   /**
    * ### WebSocket 发送给服务端数据的方法
    */
   send: AsyncAPI<{
     /** 发送的数据内容 */
-    data: string | ArrayBuffer;
-  }>;
+    data: string | ArrayBuffer
+  }>
 
   /** ### 关闭 WebSocket 连接的方法。 */
   close: AsyncAPI<{
     /** 关闭连接状态码 */
-    code?: number;
+    code?: number
     /** 连接被关闭的原因 */
-    reason?: string;
-  }>;
+    reason?: string
+  }>
 
   /**
    * ### 监听 WebSocket 连接服务器成功的事件
@@ -38,49 +38,49 @@ interface SocketTask {
   onOpen: (
     callback: (res: {
       /** 连接服务器返回的 Response Header */
-      header: Record<string, unknown>;
+      header: Record<string, unknown>
       /** 使用的网络传输层协议 */
-      protocolType: string;
+      protocolType: string
       /** websocket 类型 */
-      socketType: 'ttnet' | 'tradition';
+      socketType: "ttnet" | "tradition"
     }) => void,
-  ) => void;
+  ) => void
 
   /** 监听 WebSocket 与服务器的连接断开的事件 */
   onClose: (
     callback: (res: {
       /** 使用的网络传输层协议 */
-      protocolType: string;
+      protocolType: string
       /** websocket 类型 */
-      socketType: string;
+      socketType: string
       /** 错误信息 */
-      errMsg: string;
+      errMsg: string
       /** 关闭原因 */
-      reason: string;
+      reason: string
       /** 关闭 code */
-      code: string | number;
+      code: string | number
     }) => void,
-  ) => void;
+  ) => void
 
   /** ### 监听 WebSocket 接收到服务器发送信息的事件。 */
   onMessage: (
     callback: (res: {
       /** 接收到的服务器消息 */
-      data: string | ArrayBuffer;
+      data: string | ArrayBuffer
       /** websocket 使用的协议 */
-      protocolType: string;
+      protocolType: string
       /** websocket 类型 */
-      socketType: 'ttnet' | 'tradition';
+      socketType: "ttnet" | "tradition"
     }) => void,
-  ) => void;
+  ) => void
 
   /** ### 监听 WebSocket 发生错误的事件 */
   onError: (
     callback: (res: {
       /** 错误信息 */
-      errMsg: string;
+      errMsg: string
     }) => void,
-  ) => void;
+  ) => void
 }
 
 /**
@@ -95,13 +95,13 @@ interface SocketTask {
 export const connectSocket: AsyncAPIWithHandler<
   {
     /** Socket 连接地址 */
-    url: string;
-    header?: Record<string, string>;
-    protocols?: string[];
+    url: string
+    header?: Record<string, string>
+    protocols?: string[]
   },
   {
     /** 当前创建的 sockTask 的序号 */
-    socketTaskId: number;
+    socketTaskId: number
   },
   SocketTask
->;
+>

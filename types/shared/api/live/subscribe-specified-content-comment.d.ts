@@ -1,4 +1,4 @@
-import { AsyncAPI } from '../types';
+import { AsyncAPI } from "../types"
 
 /**
  * ### 订阅指定内容的文字评论
@@ -6,9 +6,9 @@ import { AsyncAPI } from '../types';
 export const subscribeSpecifiedContentComment: AsyncAPI<
   {
     /** 关键字列表 */
-    keyWordList: string[];
+    keyWordList: string[]
   },
   {
-    errMsg: string;
+    errMsg: string
   }
->;
+>

@@ -1,4 +1,4 @@
-import { AsyncAPI } from './types';
+import { AsyncAPI } from "./types"
 
 /**
  * ### 调用宿主拨打电话功能
@@ -7,5 +7,5 @@ import { AsyncAPI } from './types';
  */
 export const makePhoneCall: AsyncAPI<{
   /** 电话号码 */
-  phoneNumber: string;
-}>;
+  phoneNumber: string
+}>

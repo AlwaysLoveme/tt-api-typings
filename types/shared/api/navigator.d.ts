@@ -1,4 +1,4 @@
-import { AsyncAPI } from './types';
+import { AsyncAPI } from "./types"
 
 /**
  * ### 保留当前页面, 跳转到应用内的某个页面
@@ -8,8 +8,8 @@ import { AsyncAPI } from './types';
  *
  */
 export const navigateTo: AsyncAPI<{
-  url: string;
-}>;
+  url: string
+}>
 
 /**
  * ### 关闭当前页面, 返回上一页面或多级页面
@@ -22,8 +22,8 @@ export const navigateBack: AsyncAPI<{
    *
    * 默认值 1
    */
-  delta?: number;
-}>;
+  delta?: number
+}>
 
 /**
  * ### 关闭所有页面, 打开到应用内的某个页面
@@ -36,8 +36,8 @@ export const reLaunch: AsyncAPI<{
    *
    * 如 `path?key=value&key2=value2`, 如果跳转的页面路径是 tabBar 页面则不能带参数
    */
-  url: string;
-}>;
+  url: string
+}>
 
 /**
  * ### 关闭当前页面, 跳转到应用内的某个页面
@@ -54,8 +54,8 @@ export const redirectTo: AsyncAPI<{
    *
    * 如 `path?key=value&key2=value2`, 如果跳转的页面路径是 tabBar 页面则不能带参数
    */
-  url: string;
-}>;
+  url: string
+}>
 
 /**
  * ### 跳转到 tabBar 页面
@@ -67,29 +67,29 @@ export const switchTab: AsyncAPI<{
    * 需要跳转的 `tabBar` 页面的路径
    *
    * 需在 `app.json` 的 `tabBar` 字段定义的页面, 路径后不能带参数 */
-  url: string;
-}>;
+  url: string
+}>
 
 /**
  * ### 返回到跳转来的上一个小程序。
  */
 export const navigateBackMiniProgram: AsyncAPI<{
   /** 需要返回给上一个小程序的数据，上一个小程序可在 App.onShow 中获取到这份数据 */
-  extraData?: Record<string, unknown>;
-}>;
+  extraData?: Record<string, unknown>
+}>
 
 /** ### 跳转到另一个小程序 */
 export const navigateToMiniProgram: AsyncAPI<{
   /** 要跳转的小程序 id */
-  appId: string;
+  appId: string
   /** 要跳转的小程序页面路径(不传则默认打开首页), 允许携带 query 参数 */
-  path?: string;
+  path?: string
   /**
    * 需要传递给目标小程序的数据, 目标小程序可在 App.onLaunch, App.onShow, tt.getLaunchOptionsSync 中获取到这份数据
    *
    * 如果跳转的是小游戏, 可以在 tt.onShow, tt.getLaunchOptionsSync 中可以获取到这份数据数据
    */
-  extraData?: object;
+  extraData?: object
   /**
    * 要打开的小程序版本
    *
@@ -100,5 +100,5 @@ export const navigateToMiniProgram: AsyncAPI<{
    *
    * 如果当前小程序是正式版, 则打开的小程序必定是正式版)
    */
-  envVersion?: 'current' | 'latest';
-}>;
+  envVersion?: "current" | "latest"
+}>

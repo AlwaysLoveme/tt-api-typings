@@ -1,4 +1,4 @@
-import { SyncAPI } from './types';
+import { SyncAPI } from "./types"
 
 export const createAnimation: SyncAPI<
   [
@@ -8,57 +8,57 @@ export const createAnimation: SyncAPI<
          *
          * 默认值 400
          */
-        duration?: number;
+        duration?: number
         /**
          * 定义动画在每一动画周期中执行的节奏, [参考文档](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function)
          *
          * 默认值 "linear"
          */
-        timingFunction?: string;
+        timingFunction?: string
         /**
          * 定义动画于何时开始
          *
          * 默认值 0
          */
-        delay?: number;
+        delay?: number
         /**
          * 指定元素变形的原点
          *
          * 默认值 "50% 50% 0"
          */
-        transformOrigin?: string;
+        transformOrigin?: string
       }
     | undefined,
   ],
   Animation
->;
+>
 
 interface Animation {
   /** 透明度 */
-  opacity: (value: number) => Animation;
+  opacity: (value: number) => Animation
   /** 背景色 */
-  backgroundColor: (value: string) => Animation;
+  backgroundColor: (value: string) => Animation
   /** 宽度 */
-  width: (value: number) => Animation;
+  width: (value: number) => Animation
   /** 高度 */
-  height: (value: number) => Animation;
+  height: (value: number) => Animation
   /** 顶部距离 */
-  top: (value: number) => Animation;
+  top: (value: number) => Animation
   /** 底部距离 */
-  bottom: (value: number) => Animation;
+  bottom: (value: number) => Animation
   /** 左侧距离 */
-  left: (value: number) => Animation;
+  left: (value: number) => Animation
   /** 右侧距离 */
-  right: (value: number) => Animation;
+  right: (value: number) => Animation
 
   /** 旋转, 等效 rotateZ */
-  rotate: (value: number) => Animation;
+  rotate: (value: number) => Animation
   /** X 轴旋转 */
-  rotateX: (x: number) => Animation;
+  rotateX: (x: number) => Animation
   /** Y 轴旋转 */
-  rotateY: (y: number) => Animation;
+  rotateY: (y: number) => Animation
   /** Z 轴旋转 */
-  rotateZ: (z: number) => Animation;
+  rotateZ: (z: number) => Animation
   /**
    * 从 固定轴 顺时针旋转一个角度
    *
@@ -67,36 +67,36 @@ interface Animation {
    * @param z 描述旋转轴向量的z坐标
    * @param a 代表旋转的角度. 正角度表示顺时针旋转, 负角度表示逆时针旋转
    */
-  rotate3d: (x: number, y: number, z: number, a: number) => Animation;
+  rotate3d: (x: number, y: number, z: number, a: number) => Animation
 
   /** XY 缩放 */
-  scale: (s: number) => Animation;
+  scale: (s: number) => Animation
   /** X 轴缩放 */
-  scaleX: (x: number) => Animation;
+  scaleX: (x: number) => Animation
   /** Y 轴缩放 */
-  scaleY: (y: number) => Animation;
+  scaleY: (y: number) => Animation
   /** Z 轴缩放 */
-  scaleZ: (z: number) => Animation;
+  scaleZ: (z: number) => Animation
   /** XYZ 轴缩放 */
-  scale3d: (x: number, y: number, z: number) => Animation;
+  scale3d: (x: number, y: number, z: number) => Animation
 
   /** XY 轴平移 */
-  translate: (x: number, y: number) => Animation;
+  translate: (x: number, y: number) => Animation
   /** X 轴平移 */
-  translateX: (x: number) => Animation;
+  translateX: (x: number) => Animation
   /** Y 轴平移 */
-  translateY: (y: number) => Animation;
+  translateY: (y: number) => Animation
   /** Z 轴平移 */
-  translateZ: (z: number) => Animation;
+  translateZ: (z: number) => Animation
   /** XYZ 轴平移 */
-  translate3d: (x: number, y: number, z: number) => Animation;
+  translate3d: (x: number, y: number, z: number) => Animation
 
   /** XY 轴倾斜 */
-  skew: (x: number, y: number) => Animation;
+  skew: (x: number, y: number) => Animation
   /** X 轴倾斜 */
-  skewX: (x: number) => Animation;
+  skewX: (x: number) => Animation
   /** Y 轴倾斜 */
-  skewY: (y: number) => Animation;
+  skewY: (y: number) => Animation
 
   /**
    * CSS 函数 matrix() 指定了一个由指定的 6 个值组成的 2D 变换矩阵
@@ -112,7 +112,7 @@ interface Animation {
     d: number,
     tx: number,
     ty: number,
-  ) => Animation;
+  ) => Animation
 
   /**
    * CSS 函数 matrix3d() 以 4x4 齐次矩阵的形式定义一个3D转换
@@ -135,5 +135,5 @@ interface Animation {
     b4: number,
     c4: number,
     d4: number,
-  ) => Animation;
+  ) => Animation
 }

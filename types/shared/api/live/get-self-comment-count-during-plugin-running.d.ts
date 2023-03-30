@@ -1,4 +1,4 @@
-import { AsyncAPI } from '../types';
+import { AsyncAPI } from "../types"
 
 /**
  * ### 获取当前用户在小插件运行期间的评论次数
@@ -6,7 +6,7 @@ import { AsyncAPI } from '../types';
 export const getSelfCommentCountDuringPluginRunning: AsyncAPI<
   {},
   {
-    errMsg: string;
-    commentCount: number;
+    errMsg: string
+    commentCount: number
   }
->;
+>

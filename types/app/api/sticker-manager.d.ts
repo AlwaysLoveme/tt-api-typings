@@ -1,13 +1,13 @@
-import { SyncAPI } from './types';
+import { SyncAPI } from "./types"
 
 export interface WebGLTexture {}
 interface StickerProcessor {
   paintToTexture: (
     inputTexture: WebGLTexture,
     outputTexture: WebGLTexture,
-  ) => void;
+  ) => void
 }
-type Load = SyncAPI<[], {}>;
+type Load = SyncAPI<[], {}>
 
 type OnLoad = SyncAPI<
   [
@@ -17,7 +17,7 @@ type OnLoad = SyncAPI<
     (res: StickerProcessor) => void,
   ],
   {}
->;
+>
 
 type OnError = SyncAPI<
   [
@@ -27,7 +27,7 @@ type OnError = SyncAPI<
     (err: Error) => void,
   ],
   {}
->;
+>
 
 type PaintToTexture = SyncAPI<
   /**
@@ -35,19 +35,19 @@ type PaintToTexture = SyncAPI<
    */
   [inputTexture: WebGLTexture, outputTexture: WebGLTexture],
   {}
->;
+>
 
 /** ### 进行网络加载 */
-export const load: Load;
+export const load: Load
 
 /** ### 设置加载完成回调，会返回加载好的贴纸处理器 */
-export const onLoad: OnLoad;
+export const onLoad: OnLoad
 
 /** ### 设置加载失败回调，会返回加载失败的原因 */
-export const onError: OnError;
+export const onError: OnError
 
 /** ### 将输入纹理通过贴纸处理后绘制到输出纹理上 */
-export const paintToTexture: PaintToTexture;
+export const paintToTexture: PaintToTexture
 
 /**
  * ### 创建一个贴纸管理器
@@ -61,8 +61,8 @@ export const createStickerManager: SyncAPI<
     stickerId: string,
   ],
   {
-    load: Load;
-    onError: OnError;
-    onLoad: OnLoad;
+    load: Load
+    onError: OnError
+    onLoad: OnLoad
   }
->;
+>

@@ -1,10 +1,10 @@
-import { AsyncAPI } from '../types';
+import { AsyncAPI } from "../types"
 
 interface RoomInfo {
   /** 房间id */
-  roomID: string;
+  roomID: string
   /** 开播时长，单位为秒 */
-  liveDuration: number;
+  liveDuration: number
 }
 
 /**
@@ -14,8 +14,8 @@ export const getRoomInfo: AsyncAPI<
   {},
   {
     /** "getRoomInfo:ok" */
-    errMsg: string;
+    errMsg: string
     /** 房间信息 */
-    roomInfo: RoomInfo;
+    roomInfo: RoomInfo
   }
->;
+>

@@ -1,11 +1,11 @@
-import { SyncAPI } from './types';
+import { SyncAPI } from "./types"
 
-type Start = SyncAPI<[], {}>;
-type Pause = SyncAPI<[], {}>;
-type Resume = SyncAPI<[], {}>;
-type Stop = SyncAPI<[], {}>;
-type Destroy = SyncAPI<[], {}>;
-type RequestFrame = SyncAPI<[], {}>;
+type Start = SyncAPI<[], {}>
+type Pause = SyncAPI<[], {}>
+type Resume = SyncAPI<[], {}>
+type Stop = SyncAPI<[], {}>
+type Destroy = SyncAPI<[], {}>
+type RequestFrame = SyncAPI<[], {}>
 type OnError = SyncAPI<
   [
     /**
@@ -14,27 +14,27 @@ type OnError = SyncAPI<
     (err: Error) => void,
   ],
   {}
->;
-type OnStart = SyncAPI<[() => void], {}>;
+>
+type OnStart = SyncAPI<[() => void], {}>
 type onStop = SyncAPI<
   [
     (info: {
       /**
        * The file path of the output video.
        */
-      filePath: string;
+      filePath: string
       /**
        * The duration of the output video, in seconds.
        */
-      duration: number;
+      duration: number
       /**
        * The file size of the output video, in kb.
        */
-      fileSize: number;
+      fileSize: number
     }) => void,
   ],
   {}
->;
+>
 
 export const createMediaRecorder: SyncAPI<
   [
@@ -44,22 +44,22 @@ export const createMediaRecorder: SyncAPI<
        * The width of the output video.
        * @default 480
        */
-      width?: number;
+      width?: number
       /**
        * The height of the output video.
        * @default 640
        */
-      height?: number;
+      height?: number
       /**
        * The bit rate of the output video, in kbps.
        * @default 3000
        */
-      videoBitsPerSecond?: number;
+      videoBitsPerSecond?: number
       /**
        * The gop(group of pictures) of the output video.
        * @default 12
        */
-      gop?: number;
+      gop?: number
       /**
        * The fps(frame per second) of the outpu video.
        * This value corresponds to the intended frame rate.
@@ -67,16 +67,16 @@ export const createMediaRecorder: SyncAPI<
        * In manual mode, you need to call `requestFrame` to trigger the recording of the canvas.
        * @default 60
        */
-      fps?: number;
+      fps?: number
     },
   ],
   {
-    start: Start;
-    pause: Pause;
-    resume: Resume;
-    stop: Stop;
-    destroy: Destroy;
-    onError: OnError;
-    requestFrame: RequestFrame;
+    start: Start
+    pause: Pause
+    resume: Resume
+    stop: Stop
+    destroy: Destroy
+    onError: OnError
+    requestFrame: RequestFrame
   }
->;
+>

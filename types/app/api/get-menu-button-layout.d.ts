@@ -1,4 +1,4 @@
-import { SyncAPI } from './types';
+import { SyncAPI } from "./types"
 
 /**
  * 获取菜单按钮（右上角胶囊按钮）的布局位置信息。坐标信息以屏幕左上角为原点。
@@ -7,19 +7,19 @@ export const getMenuButtonBoundingClientRect: SyncAPI<
   [],
   {
     /** 宽度，单位：px */
-    width: number;
+    width: number
     /** 高度，单位：px */
-    height: number;
+    height: number
     /** 上边界坐标，单位：px */
-    top: number;
+    top: number
     /** 右边界坐标，单位：px */
-    right: number;
+    right: number
     /** 左边界坐标，单位：px */
-    left: number;
+    left: number
     /** 下边界坐标，单位：px */
-    bottom: number;
+    bottom: number
   }
->;
+>
 
 /**
  * 获取菜单按钮（右上角胶囊按钮）的布局位置信息。坐标信息以屏幕左上角为原点。
@@ -28,16 +28,16 @@ export const getMenuButtonLayout: SyncAPI<
   [],
   {
     /** 宽度，单位：px */
-    width: number;
+    width: number
     /** 高度，单位：px */
-    height: number;
+    height: number
     /** 上边界坐标，单位：px */
-    top: number;
+    top: number
     /** 右边界坐标，单位：px */
-    right: number;
+    right: number
     /** 左边界坐标，单位：px */
-    left: number;
+    left: number
     /** 下边界坐标，单位：px */
-    bottom: number;
+    bottom: number
   }
->;
+>

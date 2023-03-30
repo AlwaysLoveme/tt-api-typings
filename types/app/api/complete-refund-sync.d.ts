@@ -1,19 +1,19 @@
-import { SyncAPI } from './types';
+import { SyncAPI } from "./types"
 /**
  * 申请退款
  */
 export const completeRefundSync: SyncAPI<
   [
     {
-      orderId?: string;
+      orderId?: string
       result: {
-        status: 'success' | 'fail';
-        outOrderNo: string;
+        status: "success" | "fail"
+        outOrderNo: string
         result:
-          | { refundId: string; outRefundNo: string; orderId: string }
-          | { errMsg: string };
-      };
+          | { refundId: string, outRefundNo: string, orderId: string }
+          | { errMsg: string }
+      }
     },
   ],
   {}
->;
+>

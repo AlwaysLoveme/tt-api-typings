@@ -1,4 +1,4 @@
-import { AsyncAPI } from './types';
+import { AsyncAPI } from "./types"
 
 /**
  * ### 显示操作菜单
@@ -7,10 +7,10 @@ import { AsyncAPI } from './types';
  */
 export const showActionSheet: AsyncAPI<
   {
-    itemList: string[];
+    itemList: string[]
   },
   {
     /**  */
-    tapIndex: number;
+    tapIndex: number
   }
->;
+>

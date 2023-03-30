@@ -1,4 +1,4 @@
-import { AsyncAPIWithHandler } from './types';
+import { AsyncAPIWithHandler } from "./types"
 
 /**
  * ### 将本地文件上传到网络
@@ -10,37 +10,37 @@ import { AsyncAPIWithHandler } from './types';
 export const uploadFile: AsyncAPIWithHandler<
   {
     /** 目标地址 */
-    url: string;
+    url: string
     /** 本地文件路径 */
-    filePath: string;
+    filePath: string
     /** HTTP 请求的文件名 */
-    name: string;
+    name: string
     /** 请求 Header ，不能设置 referer 和 user-agent */
-    header?: Record<string, string>;
+    header?: Record<string, string>
     /** 额外参数 */
-    formData?: Record<string, string>;
+    formData?: Record<string, string>
   },
   {
     /** 返回数据 */
-    data: string;
+    data: string
     /** 返回 HTTP 状态码 */
-    statusCode: number;
+    statusCode: number
   },
   UpdateTask
->;
+>
 
 interface UpdateTask {
   onProgressUpdate: (
     callback: (data: {
       /** 上传进度 */
-      progress: number;
+      progress: number
       /** 已经上传的数据长度，单位byte */
-      totalBytesSent: number;
+      totalBytesSent: number
       /** 预期需要上传的数据总长度，单位byte */
-      totalBytesExpectedToSend: number;
+      totalBytesExpectedToSend: number
     }) => void,
-  ) => void;
+  ) => void
 
   /** 中断上传任务 */
-  abort: () => void;
+  abort: () => void
 }

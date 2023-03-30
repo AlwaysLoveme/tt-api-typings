@@ -1,4 +1,4 @@
-import { SyncAPI } from './types';
+import { SyncAPI } from "./types"
 
 type InferSync = SyncAPI<
   [
@@ -10,72 +10,72 @@ type InferSync = SyncAPI<
         /**
          * 输入的图像数据
          */
-        data: ArrayBuffer;
+        data: ArrayBuffer
         /**
          * 输入数据的宽度
          */
-        width: number;
+        width: number
         /**
          * 输入数据的高度
          */
-        height: number;
+        height: number
         /**
          * 输入数据的通道数
          */
-        channel: number;
+        channel: number
         /**
          * 输入数据的 batch 数，默认为 1
          */
-        batch?: number;
+        batch?: number
         /**
          * 输入数据的类型
          */
-        dataType: string;
+        dataType: string
         /**
          * 输入数据的格式，NCHW 或 NHWC
          */
-        dataFormat: string;
-      };
+        dataFormat: string
+      }
       /**
        * 数据转换的格式
        */
-      convertConfig: {
+      convertConfig: Array<{
         /**
          * 数据对应的输出通道
          */
-        outputChannel: number;
+        outputChannel: number
         /**
          * 归一化参数
          */
-        normalizeFactor: number;
+        normalizeFactor: number
         /**
          * 归一化后的偏置，默认为 0
          */
-        offset?: number;
+        offset?: number
         /**
          * 输入通道的配置格式
          */
-        inputConfig: {
+        inputConfig: Array<{
           /**
            * 输入通道的通道名
            */
-          inputChannel: number;
+          inputChannel: number
           /**
            * 当前通道对应的权重
            */
-          weight: number;
-        }[];
-      }[];
+          weight: number
+        }>
+      }>
     },
   ],
   {}
->;
+>
 
 interface BytennEngine {
-  inferSync: InferSync;
+  inferSync: InferSync
 }
 
-type Load = SyncAPI<[], {}>;
+type Load = SyncAPI<[], {}>
 
 type OnLoad = SyncAPI<
   [
@@ -85,7 +85,7 @@ type OnLoad = SyncAPI<
     (res: BytennEngine) => void,
   ],
   {}
->;
+>
 
 type OnError = SyncAPI<
   [
@@ -95,19 +95,19 @@ type OnError = SyncAPI<
     (err: Error) => void,
   ],
   {}
->;
+>
 
 /** ### 进行网络加载 */
-export const load: Load;
+export const load: Load
 
 /** ### 设置加载完成回调，会返回加载好的神经网络 */
-export const onLoad: OnLoad;
+export const onLoad: OnLoad
 
 /** ### 设置加载失败回调，会返回加载失败的原因 */
-export const onError: OnError;
+export const onError: OnError
 
 /** ### 使用神经网络进行同步推理，会直接返回推理结果 */
-export const inferSync: InferSync;
+export const inferSync: InferSync
 
 /**
  * ### 创建一个 BytennEngineContext
@@ -124,14 +124,14 @@ export const createBytennEngineContext: SyncAPI<
      * 需要初始化的模型配置，numThread 为后台工作线程数，backend 为推理后端类型
      */
     config?: {
-      numThread?: number;
-      backend?: string;
+      numThread?: number
+      backend?: string
     },
   ],
   {
     /** 创建好的 bytennEngineContext */
-    load: Load;
-    onError: OnError;
-    onLoad: OnLoad;
+    load: Load
+    onError: OnError
+    onLoad: OnLoad
   }
->;
+>

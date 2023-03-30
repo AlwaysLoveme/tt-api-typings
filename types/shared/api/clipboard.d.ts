@@ -1,4 +1,4 @@
-import { AsyncAPI } from './types';
+import { AsyncAPI } from "./types"
 
 /**
  * ### 设置系统剪贴板内容
@@ -6,8 +6,8 @@ import { AsyncAPI } from './types';
  */
 export const setClipboardData: AsyncAPI<{
   /** 剪贴板的内容 */
-  data: string;
-}>;
+  data: string
+}>
 
 /**
  * ### 获取系统剪贴板内容
@@ -16,6 +16,6 @@ export const getClipboardData: AsyncAPI<
   {},
   {
     /** 剪贴板的内容 */
-    data: string;
+    data: string
   }
->;
+>

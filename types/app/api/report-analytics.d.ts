@@ -1,4 +1,4 @@
-import { SyncAPI } from './types';
+import { SyncAPI } from "./types"
 
 /**
  * ### 自定义分析数据上报接口
@@ -11,4 +11,4 @@ import { SyncAPI } from './types';
  */
 export const reportAnalytics: SyncAPI<
   [name: string, data: Record<string, unknown>]
->;
+>

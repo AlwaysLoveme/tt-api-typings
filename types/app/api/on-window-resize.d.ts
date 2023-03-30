@@ -1,4 +1,4 @@
-import { SyncAPI } from './types';
+import { SyncAPI } from "./types"
 
 /**
  * ### 开启一个监听窗口大小的监听器
@@ -10,10 +10,10 @@ export const onWindowResize: SyncAPI<
     windowResize: (
       callback: (res: {
         /** 窗口宽度 */
-        windowWidth: number;
+        windowWidth: number
         /** 窗口高度 */
-        windowHeight: number;
+        windowHeight: number
       }) => void,
-    ) => void;
+    ) => void
   }
->;
+>

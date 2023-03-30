@@ -1,4 +1,4 @@
-import { AsyncAPI, SyncAPI } from './types';
+import { AsyncAPI, SyncAPI } from "./types"
 
 /**
  * ### 监听罗盘数据变化事件
@@ -15,15 +15,15 @@ export const onCompassChange: SyncAPI<
   [
     (res: {
       /** 方向 */
-      direction?: number;
+      direction?: number
     }) => void,
   ]
->;
+>
 
 /**
  * ### 取消监听罗盘数据变化事件
  */
-export const offCompassChange: SyncAPI<[(...args: any[]) => void]>;
+export const offCompassChange: SyncAPI<[(...args: any[]) => void]>
 
 /**
  * ### 开始监听罗盘数据
@@ -34,9 +34,9 @@ export const offCompassChange: SyncAPI<[(...args: any[]) => void]>;
  *  - 加速后退
  *  - 摇一摇
  */
-export const startCompass: AsyncAPI;
+export const startCompass: AsyncAPI
 
 /**
  * ### 停止监听罗盘数据
  */
-export const stopCompass: AsyncAPI;
+export const stopCompass: AsyncAPI

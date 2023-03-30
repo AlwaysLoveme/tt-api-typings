@@ -1,4 +1,4 @@
-import { SyncAPI } from './types';
+import { SyncAPI } from "./types"
 
 /**
  * ### 创建插屏广告组件
@@ -8,27 +8,27 @@ import { SyncAPI } from './types';
 export const createInterstitialAd: SyncAPI<
   [{ adUnitId: string }],
   InterstitialAd
->;
+>
 
-type Callback = (...args: any[]) => any;
+type Callback = (...args: any[]) => any
 
 interface InterstitialAd {
   /** 显示插屏广告 */
-  show: () => Promise<any>;
+  show: () => Promise<any>
   /** 加载插屏广告 */
-  load: () => Promise<any>;
+  load: () => Promise<any>
   /** 销毁插屏广告实例 */
-  destroy: () => Promise<any>;
+  destroy: () => Promise<any>
   /** 监听插屏广告加载事件 */
-  onLoad: (fn: Callback) => void;
+  onLoad: (fn: Callback) => void
   /** 取消监听插屏广告加载事件 */
-  offLoad: (fn: Callback) => void;
+  offLoad: (fn: Callback) => void
   /** 监听插屏错误事件 */
-  onError: (fn: (data: { errMsg: string; errCode: number }) => void) => void;
+  onError: (fn: (data: { errMsg: string, errCode: number }) => void) => void
   /** 取消监听插屏错误事件 */
-  offError: (fn: Callback) => void;
+  offError: (fn: Callback) => void
   /** 监听插屏广告关闭事件 */
-  onClose: (fn: (data: any) => void) => void;
+  onClose: (fn: (data: any) => void) => void
   /** 取消监听插屏广告关闭事件 */
-  offClose: (fn: Callback) => void;
+  offClose: (fn: Callback) => void
 }

@@ -1,4 +1,4 @@
-import { AsyncAPI } from '../types';
+import { AsyncAPI } from "../types"
 
 /**
  * ### 取消监听全部指定用户的文字评论
@@ -6,6 +6,6 @@ import { AsyncAPI } from '../types';
 export const unsubscribeAllSpecifiedUserComment: AsyncAPI<
   {},
   {
-    errMsg: string;
+    errMsg: string
   }
->;
+>

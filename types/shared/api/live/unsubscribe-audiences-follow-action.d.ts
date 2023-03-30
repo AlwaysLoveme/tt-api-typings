@@ -1,4 +1,4 @@
-import { AsyncAPI } from '../types';
+import { AsyncAPI } from "../types"
 
 /**
  * ### 取消订阅当前直播间观众的关注/取消关注行为
@@ -6,6 +6,6 @@ import { AsyncAPI } from '../types';
 export const unsubscribeAudiencesFollowAction: AsyncAPI<
   {},
   {
-    errMsg: string;
+    errMsg: string
   }
->;
+>

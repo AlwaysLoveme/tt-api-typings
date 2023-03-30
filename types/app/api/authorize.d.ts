@@ -1,4 +1,4 @@
-import { AsyncAPI } from './types';
+import { AsyncAPI } from "./types"
 
 /**
  * ### 提前向用户发出授权请求
@@ -6,5 +6,5 @@ import { AsyncAPI } from './types';
  */
 export const authorize: AsyncAPI<{
   /** 需要预授权的 scope，详见 用户授权 scope 说明 */
-  scope: string;
-}>;
+  scope: string
+}>

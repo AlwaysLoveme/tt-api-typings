@@ -1,4 +1,4 @@
-import { AsyncAPI } from './types';
+import { AsyncAPI } from "./types"
 
 /**
  * ### 保存图片到系统相册
@@ -6,5 +6,5 @@ import { AsyncAPI } from './types';
  */
 export const saveImageToPhotosAlbum: AsyncAPI<{
   /** 图片文件路径，可以是临时文件路径(如调用 tt.downloadFile 或 tt.compressImage 等 API 返回的路径）也可以是永久文件路径，不支持网络路径 */
-  filePath: string;
-}>;
+  filePath: string
+}>

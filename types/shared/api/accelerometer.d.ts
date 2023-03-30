@@ -1,15 +1,15 @@
-import { AsyncAPI, SyncAPI } from './types';
+import { AsyncAPI, SyncAPI } from "./types"
 
 /**
  * ### 开始监听加速度数据
  * 具体加速度数据通过注册tt.onAccelerometerChange的回调方法来获取
  */
-export const startAccelerometer: AsyncAPI;
+export const startAccelerometer: AsyncAPI
 
 /**
  * ### 停止监听加速度数据
  */
-export const stopAccelerometer: AsyncAPI;
+export const stopAccelerometer: AsyncAPI
 
 /**
  * ### 监听加速度数据。
@@ -19,11 +19,11 @@ export const onAccelerometerChange: SyncAPI<
   [
     callback: (res: {
       /** X 轴数据 */
-      x: number;
+      x: number
       /** Y 轴数据 */
-      y: number;
+      y: number
       /** Z 轴数据 */
-      z: number;
+      z: number
     }) => void,
   ]
->;
+>

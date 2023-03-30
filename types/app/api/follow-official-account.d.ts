@@ -1,4 +1,4 @@
-import { AsyncAPI } from './types';
+import { AsyncAPI } from "./types"
 
 /**
  * 关注小程序绑定的头条号
@@ -9,6 +9,6 @@ export const followOfficialAccount: AsyncAPI<
   {},
   {
     /** 如果为 0 表示关注成功 */
-    errCode: 0 | 1;
+    errCode: 0 | 1
   }
->;
+>

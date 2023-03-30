@@ -1,4 +1,4 @@
-import { AsyncAPI } from './types';
+import { AsyncAPI } from "./types"
 
 /**
  * ### 用户的登录态具有时效性检查
@@ -18,4 +18,4 @@ import { AsyncAPI } from './types';
  * });
  * ```
  */
-export const checkSession: AsyncAPI;
+export const checkSession: AsyncAPI

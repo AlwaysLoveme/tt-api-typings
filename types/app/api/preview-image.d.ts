@@ -1,4 +1,4 @@
-import { AsyncAPI } from './types';
+import { AsyncAPI } from "./types"
 
 /**
  * ## 预览一组图片
@@ -9,9 +9,9 @@ import { AsyncAPI } from './types';
  */
 export const previewImage: AsyncAPI<{
   /** 需要预览的图片地址列表 */
-  urls: string[];
+  urls: string[]
   /** 当前显示图片的链接，不填则默认为 urls 中的第一张 */
-  current?: string;
+  current?: string
   /** 是否显示长按菜单 */
-  showmenu?: boolean;
-}>;
+  showmenu?: boolean
+}>

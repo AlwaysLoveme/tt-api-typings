@@ -1,4 +1,4 @@
-import { AsyncAPI } from './types';
+import { AsyncAPI } from "./types"
 
 /**
  * ### 获取图片信息。
@@ -8,16 +8,16 @@ import { AsyncAPI } from './types';
 export const getImageInfo: AsyncAPI<
   {
     /** 图片地址 */
-    src: string;
+    src: string
   },
   {
     /** 图片宽度(单位: px) */
-    width: number;
+    width: number
     /** 图片高度(单位: px) */
-    height: number;
+    height: number
     /** 图片格式 */
-    type: string;
+    type: string
     /** 返回图片的本地路径，若为网络图片则该 API 首先会下载图片再返回下载到本地后的临时路径 */
-    path: string;
+    path: string
   }
->;
+>

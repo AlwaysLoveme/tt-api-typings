@@ -1,4 +1,4 @@
-import { AsyncAPI } from './types';
+import { AsyncAPI } from "./types"
 
 /**
  * ### 调起客户端订阅消息界面，返回用户订阅消息的操作结果。当用户勾选了订阅面板中的 “总是保持以上选择，不再询问” 时，
@@ -7,11 +7,11 @@ import { AsyncAPI } from './types';
 export const requestSubscribeMessage: AsyncAPI<
   {
     /** 需要订阅的消息模板的 id 的集合，最多支持传入三个 tmplId */
-    tmplIds: [];
+    tmplIds: []
   },
   {
     /** "requestSubscribeMessage:ok" */
-    errMsg: string;
+    errMsg: string
     /** [TEMPLATE_ID]为模板 id，取值见下表
      * | 值    | 说明                           |
      * | :---- | :----                         |
@@ -20,6 +20,6 @@ export const requestSubscribeMessage: AsyncAPI<
      * | ban   | 表示已被后台封禁                 |
      * | fail  | 表示该条 id 对应的模版消息授权失败 |
      */
-    TEMPLATE_ID: string;
+    TEMPLATE_ID: string
   }
->;
+>

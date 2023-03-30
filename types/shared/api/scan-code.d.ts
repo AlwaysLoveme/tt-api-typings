@@ -1,4 +1,4 @@
-import { AsyncAPI } from './types';
+import { AsyncAPI } from "./types"
 
 /**
  * ### 调用宿主的扫码功能
@@ -8,6 +8,6 @@ export const scanCode: AsyncAPI<
   {},
   {
     /** 所扫码的内容 */
-    result: string;
+    result: string
   }
->;
+>
