@@ -249,7 +249,7 @@ type ComponentInstance<
   Partial<Lifetimes> &
   ThisType<Instance<TData, TProperty, TMethod, TCustom>>
 
-type TrivialInstance = Instance<AnyObject, AnyObject, AnyObject, AnyObject>
+export type TrivialInstance = Instance<AnyObject, AnyObject, AnyObject, AnyObject>
 
 export type ComponentConstructor = <
   TData extends AnyObject,

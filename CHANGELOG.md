@@ -1,3 +1,5 @@
+# 2023-03-30 v0.0.10
+- feat: add export TrivialInstance type of Component
 # 2023-03-30 v0.0.9
 - fix: tt 声明方式与官方保持一致([https://github.com/AlwaysLoveme/tt-api-typings/issues/4](https://github.com/AlwaysLoveme/tt-api-typings/issues/4))
 # 2022-08-08 v0.0.8
